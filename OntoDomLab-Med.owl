@@ -1,0 +1,1490 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/DomLab-Med#"
+     xml:base="http://www.semanticweb.org/DomLab-Med"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/OntoDomLab-Med">
+        <owl:imports rdf:resource="http://www.w3.org/2008/05/skos-xl"/>
+        <rdfs:comment xml:lang="en">OntoDomLab-Med [Domain Label Ontology - Med]</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#AssociatedMorphologyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#AssociatedMorphologyOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasAssociatedMorphology"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#PathologicalProcess"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#BranchOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#BranchOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#DeviceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#DeviceOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#usesDevice"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Procedure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#DirectMorphologyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#DirectMorphologyOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasDirectMorphology"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#MorphologicAbnormality"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Procedure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#DirectProcedureSiteOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#DirectProcedureSiteOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasDirectProcedureSite"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#FindingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#FindingOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasFinding"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#ClinicalFinding"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#FindingSiteOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#FindingSiteOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasFindingSite"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#AnatomicalEntity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#MethodOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#MethodOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#ProcedureOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#ProcedureOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#hasAssociatedMorphology -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#hasAssociatedMorphology">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Disease"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#PathologicalProcess"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#hasBranch -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#hasDirectMorphology -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#hasDirectMorphology">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Procedure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#MorphologicAbnormality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#hasDirectProcedureSite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#hasDirectProcedureSite"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#hasFinding -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#hasFinding">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Disease"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#ClinicalFinding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#hasFindingSite -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#hasFindingSite">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Disease"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#AnatomicalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#hasMethod -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#hasMethod"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#hasProcedure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#hasProcedure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#isPerformedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#isPerformedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#performs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#isTreatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#isTreatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#treats"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#partOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#partOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#performs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#performs"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#treats -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#treats">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#usesDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/OntoDomLab-Med#usesDevice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Procedure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Action"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#AnatomicalEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#AnatomicalEntity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#DirectProcedureSiteOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#SurgicalProcedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#AnatomicalPathology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#AnatomicalPathology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Pathology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Teratology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Anatomy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Anatomy">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Biology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Bacteriology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Bacteriology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Biology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#BenignNeoplasm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#BenignNeoplasm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Neoplasm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Biology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Biology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#NaturalSciences"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Anatomy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Bacteriology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Embryology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Genetics"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Histology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Parasitology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Physiology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#BodyStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#BodyStructure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Cardiology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Cardiology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#ClinicalFinding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#ClinicalFinding"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#ClinicalPathology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#ClinicalPathology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Pathology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Dentistry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Dentistry">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Dermatology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Dermatology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Device"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Disease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Disease"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#DiseaseOfAnatomicalEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#DiseaseOfAnatomicalEntity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Dysmenorrhea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Dysmenorrhea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#OtherDisordersOfFemaleGenitalTract"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasFinding"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Pain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasFindingSite"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Uterus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Embryology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Embryology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Biology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Endocrinology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Endocrinology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Endometriosis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Endometriosis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#FemaleReproductiveSystemDisease"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Endometritis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Endometritis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Endometritis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#FemaleReproductiveSystemDisease"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasAssociatedMorphology"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Inflammation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasFindingSite"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Endometrium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasProcedure"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Hysteroscopy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Endometrium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Endometrium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#OrganComponentLayer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#FindingSiteOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Endometritis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Endoscope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Endoscope">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Excision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Excision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#SurgicalAction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#MethodOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Hysterectomy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#MethodOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#UterineMyomectomy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#FemaleReproductiveSystemDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#FemaleReproductiveSystemDisease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#ReproductiveSystemDisease"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#isTreatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Gynecology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#FieldOfScience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#FieldOfScience"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#ForensicMedicine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#ForensicMedicine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Gastroenterology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Gastroenterology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#GeneralMedicine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#GeneralMedicine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Genetics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Genetics">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Biology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Gynecology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Gynecology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#ObstetricsAndGynecology"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#treats"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#FemaleReproductiveSystemDisease"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#HealthSciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#HealthSciences">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#MedicalAndHealthSciences"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Pharmacy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Histology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Histology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Biology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Hysterectomy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Hysterectomy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#SurgicalProcedure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasDirectProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Uterus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Hysteroscopy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Hysteroscope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Hysteroscope">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Endoscope"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#DeviceOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Hysteroscopy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Hysteroscopy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Hysteroscopy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#NonSurgicalProcedure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#ProcedureOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Endometritis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasDirectProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Uterus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasMethod"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Inspection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#usesDevice"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Hysteroscope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Inflammation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Inflammation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#PathologicalProcess"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Inspection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Inspection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#NonSurgicalAction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#MethodOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Hysteroscopy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#InternalMedicine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#InternalMedicine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Laparoscope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Laparoscope">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Endoscope"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Lesion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Lesion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#MorphologicAbnormality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#MedicalAndHealthSciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#MedicalAndHealthSciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#FieldOfScience"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#HealthSciences"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Medicine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Medicine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#MedicalAndHealthSciences"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Cardiology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Dentistry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Dermatology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Endocrinology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#ForensicMedicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Gastroenterology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#GeneralMedicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#InternalMedicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Nephrology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Neurology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#NuclearMedicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#ObstetricsAndGynecology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Otolaryngology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#PalliativeMedicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Pathology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Psychiatry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Radiology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Rheumatology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Surgery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#MorphologicAbnormality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#MorphologicAbnormality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BodyStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Myoma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Myoma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BenignNeoplasm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#NaturalSciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#NaturalSciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#FieldOfScience"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasBranch"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Biology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Neoplasm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Neoplasm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Lesion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Nephrology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Nephrology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Neurology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Neurology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://publications.europa.eu/resource/authority/euroscivoc/bd73a3ec-78a0-4318-9674-cc62824a6e65</rdfs:comment>
+        <rdfs:comment xml:lang="pt">neurologia</rdfs:comment>
+        <skos:definition xml:lang="en">&quot;A medical specialty concerned with the study of the structures, functions, and diseases of the nervous system.&quot;
+https://www.ncbi.nlm.nih.gov/mesh?Db=mesh&amp;Cmd=DetailsSearch&amp;Term=%22Neurology%22%5BMeSH+Terms%5D</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#NonSurgicalAction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#NonSurgicalAction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#NonSurgicalProcedure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#NonSurgicalProcedure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#NuclearMedicine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#NuclearMedicine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Obstetrics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Obstetrics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#ObstetricsAndGynecology"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#ObstetricsAndGynecology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#ObstetricsAndGynecology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Organ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Organ">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#AnatomicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#OrganComponent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#OrganComponent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Organ"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#OrganComponentLayer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#OrganComponentLayer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#OrganComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#OtherDisordersOfFemaleGenitalTract -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#OtherDisordersOfFemaleGenitalTract">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#FemaleReproductiveSystemDisease"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Otolaryngology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Otolaryngology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Pain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Pain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#ClinicalFinding"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#FindingOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Dysmenorrhea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#PalliativeMedicine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#PalliativeMedicine">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Parasitology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Parasitology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Biology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#PathologicalProcess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#PathologicalProcess">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Pathology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Pathology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Pharmacy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Pharmacy">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#HealthSciences"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Physiology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Physiology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Biology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Procedure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Procedure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Process -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Process"/>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Psychiatry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Psychiatry">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Radiology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Radiology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#ReproductiveSystemDisease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#ReproductiveSystemDisease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#DiseaseOfAnatomicalEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Rheumatology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Rheumatology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Surgery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Surgery">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Medicine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#SurgicalProcedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#SurgicalAction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#SurgicalAction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Action"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#MethodOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#SurgicalProcedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#SurgicalProcedure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#SurgicalProcedure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Procedure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasDirectProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#AnatomicalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasMethod"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#SurgicalAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#isPerformedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Surgery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Teratology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Teratology">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#BranchOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#AnatomicalPathology"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#UterineMyoma -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#UterineMyoma">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Myoma"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#DirectMorphologyOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#UterineMyomectomy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasFindingSite"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Uterus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#UterineMyomectomy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#UterineMyomectomy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#SurgicalProcedure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasDirectMorphology"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#UterineMyoma"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasDirectProcedureSite"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Uterus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#hasMethod"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Excision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Uterus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Uterus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Organ"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#DirectProcedureSiteOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Hysterectomy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#DirectProcedureSiteOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Hysteroscopy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#DirectProcedureSiteOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#UterineMyomectomy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#FindingSiteOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Dysmenorrhea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#FindingSiteOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#UterineMyoma"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Dysmenorrhea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Dysmenorrhea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Gynecology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Endometritis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Endometritis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Disease"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Gynecology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Hysterectomy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Hysterectomy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Gynecology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#SurgicalProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Hysteroscope -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Hysteroscope">
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Device"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Gynecology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Uterine_myoma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Uterine_myoma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Gynecology"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#MorphologicAbnormality"/>
+        <rdfs:label xml:lang="en">Fibromyoma</rdfs:label>
+        <rdfs:label xml:lang="en">Uterine myoma</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/OntoDomLab-Med#Uterus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Uterus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#AnatomicalEntity"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/OntoDomLab-Med#Gynecology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Dysmenorrhea">
+        <rdfs:label xml:lang="en">Dysmenorrhea</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Endometritis">
+        <rdfs:label xml:lang="en">Endometritis</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Hysterectomy">
+        <rdfs:label xml:lang="en">Hysterectomy</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Hysteroscope">
+        <rdfs:label xml:lang="en">Hysteroscope</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/OntoDomLab-Med#Uterus">
+        <rdfs:label xml:lang="en">Uterus</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
