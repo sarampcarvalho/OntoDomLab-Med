@@ -24,5 +24,4 @@ recherche en linguistique. Revue de Philologie Française et Romane - Langue(s) 
 
 - Salgado, Ana / Costa, Rute / Tasovac, Toma (2019). “Improving the consistency of usage labelling in dictionaries with TEI Lex-
 0”. Lexicography, Journal of ASIALEX, Berlin: Springer Verlag. ISSN: 2197-4292 (print)| 2197-4306, pp. 133-156, DOI 
-10.1007/s40607-019-00061-x
-
+10.1007/s40607-019-00061-x.
