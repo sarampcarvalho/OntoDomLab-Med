@@ -12,3 +12,17 @@ Research financed by Portuguese National Funding through the FCT – Fundação 
 project Centro de Linguística da Universidade NOVA de Lisboa – UID/LIN/03213/2020, by the European Union’s Horizon 2020 
 research and innovation program under Grant Agreement No. 731015 (ELEXIS), and through the FCT/MCTES as part of the 
 project 2Ai – School of Technology, IPCA – UIDB/05549/2020.
+
+# Publications
+- Carvalho, Sara (2018). A terminological approach to knowledge organization within the scope of endometriosis: the EndoTerm 
+project (Doctoral dissertation). Universidade NOVA de Lisboa / Communauté Université Grenoble Alpes. Retrieved from 
+https://run.unl.pt/handle/10362/49745.   
+
+- Costa, Rute / Carvalho, Sara / Salgado, Ana / Simões, Alberto / Tasovac, Toma (2020), “ Ontologie des marques de domaines 
+appliquée aux dictionnaires de langue générale”, in [editeur : Xavier Blanco] La lexicographie en tant que méthodologie de 
+recherche en linguistique Revue de Philologie Française et Romane - Langue(s) & Parole, n.5 (forthcoming).
+
+- Salgado, Ana / Costa, Rute / Tasovac, Toma (2019). “Improving the consistency of usage labelling in dictionaries with TEI Lex-
+0”. Lexicography, Journal of ASIALEX, Berlin: Springer Verlag. ISSN: 2197-4292 (print)| 2197-4306, pp. 133-156, DOI 
+10.1007/s40607-019-00061-x
+
